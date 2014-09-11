@@ -2,7 +2,10 @@ Description
 ===========
 
 This is a Chef report handler that reports the execution time spent in each:
-cookbook, recipe, and resource.
+cookbook, recipe, and resource. It is a 1:1 fork of the [chef-handler-profiler by joemiller](https://github.com/joemiller/chef-handler-profiler), with the single change
+that the loglevel of this extension is Chef::Log.info(). The reason for this is that
+Amazon Opsworks with Chef 11.10 does not have any feasible solution to display debug
+messages.
 
 * http://wiki.opscode.com/display/chef/Exception+and+Report+Handlers
 
